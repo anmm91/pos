@@ -1,6 +1,26 @@
 <?php
 
 return [
+    'point_of_sale'=>'POS',
+    'a'=>'A',
+    'lt'=>'LT',
+    'admin'=>'Admin',
+    'lte'=>'LTE',
+    'Arabic Creative'=>'Arabic Creative',
+    'online'=>'Online',
+    'Member since'=>'  logged since',
+    'change_password'=>'change password',
+    '0'=>'0',
+    '1'=>'1',
+    '2'=>'2',
+    '3'=>'3',
+    '4'=>'4',
+    '5'=>'5',
+    '6'=>'6',
+    '7'=>'7',
+    '8'=>'8',
+    '9'=>'9',
+    '10'=>'10',
     'dashboard' => 'Home Page',
     'logout' => 'Log Out',
 
@@ -48,7 +68,7 @@ return [
     'action' => 'Action',
 
     'permissions' => 'Permissions',
-    
+
     'regions'=> 'Regions',
     'all_regions' => 'All Regions',
     'region'=> 'Region',

@@ -7,18 +7,23 @@
                 <img src="{{ asset('dashboard_files/img/user2-160x160.jpg') }}" class="img-circle" alt="User Image">
             </div>
             <div class="pull-left info">
-                <p>Arabic Creative</p>
-                <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                <p>@lang('site.Arabic Creative')</p>
+                <a href="#"><i class="fa fa-circle text-success"></i> @lang('site.online')</a>
             </div>
         </div>
 
         <ul class="sidebar-menu" data-widget="tree">
             <li><a href="{{ route('dashboard.index') }}"><i class="fa fa-th"></i><span>@lang('site.dashboard')</span></a></li>
+            @if(auth()->user()->hasPermission('read_users'))
+                <li><a href="{{ route('dashboard.users.index') }}"><i class="fa fa-users"></i><span>@lang('site.users')</span></a></li>
+            @endif
+            @if (auth()->user()->hasPermission('read_categories'))
+                <li><a href="{{ route('dashboard.categories.index') }}"><i class="fa fa-list-alt"></i><span>@lang('site.categories')</span></a></li>
+            @endif
 
-{{--            @if (auth()->user()->hasPermission('read_categories'))--}}
-{{--                <li><a href="{{ route('dashboard.categories.index') }}"><i class="fa fa-th"></i><span>@lang('site.categories')</span></a></li>--}}
-{{--            @endif--}}
-{{--            @if (auth()->user()->hasPermission('read_regions'))--}}
+            <li><a href="{{ route('dashboard.change.password') }}"><i class="fa fa-key"></i><span>@lang('site.change_password')</span></a></li>
+
+            {{--            @if (auth()->user()->hasPermission('read_regions'))--}}
 {{--                <li><a href="{{ route('dashboard.regions.index') }}"><i class="fa fa-th"></i><span>@lang('site.regions')</span></a></li>--}}
 {{--            @endif--}}
 {{--            @if (auth()->user()->hasPermission('read_governs'))--}}
@@ -31,17 +36,17 @@
 {{--                <li><a href="{{ route('dashboard.areas.index') }}"><i class="fa fa-th"></i><span>@lang('site.areas')</span></a></li>--}}
 {{--            @endif--}}
 
-{{--            @if (auth()->user()->hasPermission('read_products'))--}}
-{{--                <li><a href="{{ route('dashboard.products.index') }}"><i class="fa fa-th"></i><span>@lang('site.products')</span></a></li>--}}
-{{--            @endif--}}
+            @if (auth()->user()->hasPermission('read_products'))
+                <li><a href="{{ route('dashboard.products.index') }}"><i class="fa fa-product-hunt"></i><span>@lang('site.products')</span></a></li>
+            @endif
 
-{{--            @if (auth()->user()->hasPermission('read_clients'))--}}
-{{--                <li><a href="{{ route('dashboard.clients.index') }}"><i class="fa fa-th"></i><span>@lang('site.clients')</span></a></li>--}}
-{{--            @endif--}}
+            @if (auth()->user()->hasPermission('read_clients'))
+                <li><a href="{{ route('dashboard.clients.index') }}"><i class="fa fa-users"></i><span>@lang('site.clients')</span></a></li>
+            @endif
 
-{{--            @if (auth()->user()->hasPermission('read_orders'))--}}
-{{--                <li><a href="{{ route('dashboard.orders.index') }}"><i class="fa fa-th"></i><span>@lang('site.orders')</span></a></li>--}}
-{{--            @endif--}}
+            @if (auth()->user()->hasPermission('read_orders'))
+                <li><a href="{{ route('dashboard.orders.index') }}"><i class="fa fa-th"></i><span>@lang('site.orders')</span></a></li>
+            @endif
 
 {{--            @if (auth()->user()->hasPermission('read_users'))--}}
 {{--                <li><a href="{{ route('dashboard.users.index') }}"><i class="fa fa-th"></i><span>@lang('site.users')</span></a></li>--}}

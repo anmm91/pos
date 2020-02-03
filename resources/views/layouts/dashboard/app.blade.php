@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>AdminLTE 2 | Blank Page</title>
+    <title>@lang('site.point_of_sale')</title>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
     {{--<!-- Bootstrap 3.3.7 -->--}}
@@ -81,6 +81,7 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 
+
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 
@@ -91,8 +92,8 @@
         {{--<!-- Logo -->--}}
         <a href="{{ asset('dashboard') }}/index2.html" class="logo">
             {{--<!-- mini logo for sidebar mini 50x50 pixels -->--}}
-            <span class="logo-mini"><b>A</b>LT</span>
-            <span class="logo-lg"><b>Admin</b>LTE</span>
+            <span class="logo-mini"><b>@lang('site.a')</b>@lang('site.lt')</span>
+            <span class="logo-lg"><b>@lang('site.admin')</b>@lang('site.lte')</span>
         </a>
 
         <nav class="navbar navbar-static-top">
@@ -108,61 +109,61 @@
                 <ul class="nav navbar-nav">
 
                     <!-- Messages: style can be found in dropdown.less-->
-                    <li class="dropdown messages-menu">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="fa fa-envelope-o"></i>
-                            <span class="label label-success">4</span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li class="header">You have 4 messages</li>
-                            <li>
-                                <!-- inner menu: contains the actual data -->
-                                <ul class="menu">
-                                    <li><!-- start message -->
-                                        <a href="#">
-                                            <div class="pull-left">
-                                                <img src="{{ asset('dashboard_files/img/user2-160x160.jpg') }}" class="img-circle" alt="User Image">
-                                            </div>
-                                            <h4>
-                                                Support Team
-                                                <small>
-                                                    <i class="fa fa-clock-o"></i> 5 mins
-                                                </small>
-                                            </h4>
-                                            <p>Why not buy a new awesome theme?</p>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="footer">
-                                <a href="#">See All Messages</a>
-                            </li>
-                        </ul>
-                    </li>
+{{--                    <li class="dropdown messages-menu">--}}
+{{--                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">--}}
+{{--                            <i class="fa fa-envelope-o"></i>--}}
+{{--                            <span class="label label-success">4</span>--}}
+{{--                        </a>--}}
+{{--                        <ul class="dropdown-menu">--}}
+{{--                            <li class="header">You have 4 messages</li>--}}
+{{--                            <li>--}}
+{{--                                <!-- inner menu: contains the actual data -->--}}
+{{--                                <ul class="menu">--}}
+{{--                                    <li><!-- start message -->--}}
+{{--                                        <a href="#">--}}
+{{--                                            <div class="pull-left">--}}
+{{--                                                <img src="{{ asset('dashboard_files/img/user2-160x160.jpg') }}" class="img-circle" alt="User Image">--}}
+{{--                                            </div>--}}
+{{--                                            <h4>--}}
+{{--                                                Support Team--}}
+{{--                                                <small>--}}
+{{--                                                    <i class="fa fa-clock-o"></i> 5 mins--}}
+{{--                                                </small>--}}
+{{--                                            </h4>--}}
+{{--                                            <p>Why not buy a new awesome theme?</p>--}}
+{{--                                        </a>--}}
+{{--                                    </li>--}}
+{{--                                </ul>--}}
+{{--                            </li>--}}
+{{--                            <li class="footer">--}}
+{{--                                <a href="#">See All Messages</a>--}}
+{{--                            </li>--}}
+{{--                        </ul>--}}
+{{--                    </li>--}}
 
                     {{--<!-- Notifications: style can be found in dropdown.less -->--}}
-                    <li class="dropdown notifications-menu">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="fa fa-bell-o"></i>
-                            <span class="label label-warning">10</span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li class="header">You have 10 notifications</li>
-                            <li>
-                                {{--<!-- inner menu: contains the actual data -->--}}
-                                <ul class="menu">
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-users text-aqua"></i> 5 new members joined today
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="footer">
-                                <a href="#">View all</a>
-                            </li>
-                        </ul>
-                    </li>
+{{--                    <li class="dropdown notifications-menu">--}}
+{{--                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">--}}
+{{--                            <i class="fa fa-bell-o"></i>--}}
+{{--                            <span class="label label-warning">10</span>--}}
+{{--                        </a>--}}
+{{--                        <ul class="dropdown-menu">--}}
+{{--                            <li class="header">You have 10 notifications</li>--}}
+{{--                            <li>--}}
+{{--                                --}}{{--<!-- inner menu: contains the actual data -->--}}
+{{--                                <ul class="menu">--}}
+{{--                                    <li>--}}
+{{--                                        <a href="#">--}}
+{{--                                            <i class="fa fa-users text-aqua"></i> 5 new members joined today--}}
+{{--                                        </a>--}}
+{{--                                    </li>--}}
+{{--                                </ul>--}}
+{{--                            </li>--}}
+{{--                            <li class="footer">--}}
+{{--                                <a href="#">View all</a>--}}
+{{--                            </li>--}}
+{{--                        </ul>--}}
+{{--                    </li>--}}
 
                     {{--<!-- Tasks: style can be found in dropdown.less -->--}}
                     <li class="dropdown tasks-menu">
@@ -188,7 +189,7 @@
 
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <img src="{{ asset('dashboard_files/img/user2-160x160.jpg') }}" class="user-image" alt="User Image">
-{{--                            <span class="hidden-xs">{{ auth()->user()->first_name }} {{ auth()->user()->last_name }}</span>--}}
+                            <span class="hidden-xs">{{ auth()->user()->first_name }} {{ auth()->user()->last_name }}</span>
                         </a>
                         <ul class="dropdown-menu">
 
@@ -197,8 +198,19 @@
                                 <img src="{{ asset('dashboard_files/img/user2-160x160.jpg') }}" class="img-circle" alt="User Image">
 
                                 <p>
-{{--                                    {{ auth()->user()->first_name }} {{ auth()->user()->last_name }}--}}
-                                    <small>Member since 2 days</small>
+                                    {{ auth()->user()->first_name }} {{ auth()->user()->last_name }}
+{{--                                    <small>Member since {{auth()->user()->created_at->diffForHumans(\Carbon\Carbon::now())}}</small>--}}
+                                    <small>@lang('site.Member since')
+{{--                                        @php--}}
+{{--                                            $date = \Carbon\Carbon::parse(auth()->user()->created_at);--}}
+{{--    $now = \Carbon\Carbon::now();--}}
+
+{{--    $diff = $date->diffInDays($now);--}}
+{{--    echo $diff;--}}
+
+{{--                                        @endphp--}}
+                                        {{ $diff = Carbon\Carbon::parse(auth()->user()->created_at)->diffForHumans() }}
+                                    </small>
                                 </p>
                             </li>
 
@@ -227,6 +239,7 @@
     @yield('content')
 
     @include('partials._session')
+
 
     <footer class="main-footer">
         <div class="pull-right hidden-xs">
@@ -305,7 +318,8 @@
 
         });//end of delete
 
-        // // image preview
+        // image preview
+
         // $(".image").change(function () {
         //
         //     if (this.files && this.files[0]) {
@@ -324,6 +338,64 @@
 
     });//end of ready
 
+</script>
+<script>
+
+    // $('document').ready(function () {
+    //
+    //     $('.add-product-btn').on('click', function (e) {
+    //
+    //         e.preventDefault();
+    //         // var name=$(this).attr('data-name');
+    //         var name = $(this).data('name');
+    //         var id = $(this).data('id');
+    //         var price = $.number($(this).data('price'),2);
+    //
+    //         $(this).removeClass('btn-success').addClass('btn-default disabled');
+    //         //backtick (``)
+    //         var html = `
+    //             <tr>
+    //                 <td>${name}</td>
+    //                 <td><input type="number" data-price="${price}" name="quantities[]" class="form-control input-sm product-quantity" min="1" value="1"></td>
+    //                 <td class="product-price">${price}</td>
+    //                 <td><button class="btn btn-danger btn-sm remove-product-btn" data-id="${id}"><i class="fa fa-trash"></i></button></td>
+    //             </tr>
+    //                `;
+    //
+    //         $('.order-list').append(html);
+    //         cal();
+    //         //calculate price
+    //         // calculateTotal();
+    //
+    //         $('body').on('click', '.disabled', function (e) {
+    //             e.preventDefault()
+    //         })
+    //         $('body').on('click', '.remove-product-btn', function (e) {
+    //
+    //             var id = $(this).data('id');
+    //             e.preventDefault()
+    //             $(this).closest('tr').remove();
+    //             $('#product-' + id).removeClass('btn-default disabled').addClass('btn-success');
+    //
+    //         })//end of remove product
+    //
+    //
+    //         $('body').on('keyup change', '.product-quantity', function () {
+    //             var quantity=parseInt($(this).val());
+    //             var unit=parseInt($(this).data('price'));
+    //             $(this).closest('tr').find('.product-price').html(quantity * unit);
+    //             cal();
+    //         })
+    //
+    // })})
+    // function cal() {
+    //     var total=0;
+    //     $('.product-price').each(function () {
+    //         total+=parseInt($(this).html());
+    //
+    //     })
+    //     $('.total-price').html(total);
+    // }
 </script>
 @stack('scripts')
 </body>
