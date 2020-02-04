@@ -43,8 +43,8 @@ $(document).ready(function () {
 
         })//end of remove product
         $('body').on('keyup change','.product-quantity',function () {
-
-           var productQuantity=parseInt($(this).val());
+// alert('dddddd')
+           var productQuantity=Number($(this).val());
            // var productPrice=$(this).data('price');
            var productPrice=parseFloat($(this).data('price').replace(/,/g, ''));
            $(this).closest('tr').find('.product-price').html($.number(productQuantity * productPrice,2));
@@ -71,8 +71,19 @@ $(document).ready(function () {
                 $("#order-product-list").append(data);
             }
         })
+
     }); //end of show product
+
+    //print order
+    $(document).on('click','.print-btn',function () {
+    // $('.print-btn').on('click',function () {      //must use document as selector
+
+        $('#print-area').printThis();
+    })
+
+
 }); // end of document
+
 
 function calculateTotal() {
 

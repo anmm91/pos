@@ -1,14 +1,16 @@
 <?php
 
 namespace App;
-
+use Trexology\Pointable\Contracts\Pointable;
+use Trexology\Pointable\Traits\Pointable as PointableTrait;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Laratrust\Traits\LaratrustUserTrait;
 
-class User extends Authenticatable
+class User extends Authenticatable implements Pointable
 {
+    use PointableTrait;
     use LaratrustUserTrait;
     use Notifiable;
 

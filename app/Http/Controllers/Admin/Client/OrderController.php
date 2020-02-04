@@ -25,7 +25,10 @@ class OrderController extends Controller
     }
     public function create(Client $client){
         $categories=Category::with('products')->get();
-        return view('dashboard.clients.orders.create',compact('categories','client'));
+        $orders=$client->orders()->with('products')->paginate(3);
+//        $orders=$client->orders()->with('products')->get();
+
+        return view('dashboard.clients.orders.create',compact('categories','client','orders'));
     }
 
     public function store(Request $request,Client $client){
@@ -62,6 +65,35 @@ class OrderController extends Controller
         ];
         $this->validate($request,$rules);
 
+        $this->attach_order($request,$client);
+        //success
+        session()->flash('success',__('site.added_successfully'));
+        //redirect
+        return redirect()->route('dashboard.orders.index');
+    }
+    public function edit(Client $client,Order $order){
+
+        $categories=Category::all();
+        $orders=$client->orders()->with('products')->paginate(2);
+
+        return view('dashboard.clients.orders.edit',compact('client','order','categories','orders'));
+    }
+    public function update(Request $request ,Client $client ,Order $order){
+
+        //detach
+        $this->detach_order($order);
+        //attach
+        $this->attach_order($request,$client);
+        //success
+        session()->flash('success',__('site.updated_successfully'));
+        //redirect
+        return redirect()->route('dashboard.orders.index');
+    }
+    public function destroy(Client $client ,Order $order){
+
+    }
+
+    private function attach_order($request,$client){
         //create order for each client
         $order=$client->orders()->create([]);
         $order->products()->attach($request->products);
@@ -70,7 +102,7 @@ class OrderController extends Controller
             $product=Product::findOrFail($id);
             $total_price+=$quantity['quantity'] * $product->sale_price;
             $product->update([
-               'stock'=>$product->stock - $quantity['quantity']
+                'stock'=>$product->stock - $quantity['quantity']
             ]);
         }
 
@@ -78,19 +110,14 @@ class OrderController extends Controller
             'total_price'=>$total_price
         ]);
 
-        //success
-        session()->flash('success',__('site.added_successfully'));
-        //redirect
-        return redirect()->route('dashboard.orders.index');
     }
-    public function edit(Client $client,Order $order){
-
-
-    }
-    public function update(Request $request ,Client $client ,Order $order){
-
-    }
-    public function destroy(Client $client ,Order $order){
-
+    private function detach_order($order){
+        //loop for product for this order
+        foreach ($order->products as $product){
+            $product->update([
+                'stock'=>$product->stock + $product->pivot->quantity,
+            ]);
+            $order->delete();
+        }
     }
 }

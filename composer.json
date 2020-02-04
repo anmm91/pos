@@ -16,7 +16,8 @@
         "laravel/tinker": "^1.0",
         "laravelcollective/html": "^5.7.0",
         "mcamara/laravel-localization": "^1.4",
-        "santigarcor/laratrust": "5.0.*"
+        "santigarcor/laratrust": "5.0.*",
+        "trexology/pointable": "^1.0"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",

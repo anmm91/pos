@@ -166,6 +166,7 @@ return [
          * Package Service Providers...
          */
 
+        Trexology\Pointable\PointableServiceProvider::class,
         /*
          * Application Service Providers...
          */

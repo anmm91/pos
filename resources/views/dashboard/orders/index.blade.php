@@ -57,7 +57,7 @@
                                                 </button>
                                                 @if(auth()->user()->hasPermission('update_orders'))
                                                 <a
-                                                    href="{{route('dashboard.orders.edit',$order->id)}}"
+                                                    href="{{route('dashboard.clients.order.edit',['client'=>$order->client->id,'order'=>$order->id])}}"
                                                     class="btn btn-warning btn-sm">
                                                     <i class="fa fa-pencil"></i> edit</a>
                                                 @else

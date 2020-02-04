@@ -398,5 +398,6 @@
     // }
 </script>
 @stack('scripts')
+@stack('product-number-change')
 </body>
 </html>

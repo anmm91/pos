@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "612791a5522a5fb79f0307e70ad7b1a1",
+    "content-hash": "505716d7aed0f366c41f15a9c6e245e1",
     "packages": [
         {
             "name": "dimsav/laravel-translatable",
@@ -3356,6 +3356,50 @@
             "description": "CssToInlineStyles is a class that enables you to convert HTML-pages/files into HTML-pages/files with inline styles. This is very useful when you're sending emails.",
             "homepage": "https://github.com/tijsverkoyen/CssToInlineStyles",
             "time": "2019-10-24T08:53:34+00:00"
+        },
+        {
+            "name": "trexology/pointable",
+            "version": "v1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Trexology/laravel-pointable.git",
+                "reference": "fbd00ffe0b0d4132e486b7fd04aa1e0ca048e993"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Trexology/laravel-pointable/zipball/fbd00ffe0b0d4132e486b7fd04aa1e0ca048e993",
+                "reference": "fbd00ffe0b0d4132e486b7fd04aa1e0ca048e993",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~5.0",
+                "php": ">=5.5.9"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Trexology\\Pointable\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Trex Lim",
+                    "email": "trexlim@gmail.com"
+                }
+            ],
+            "description": "Point system for Laravel 5",
+            "keywords": [
+                "laravel",
+                "loyalty",
+                "pointable",
+                "points",
+                "reward"
+            ],
+            "time": "2017-02-20T03:53:58+00:00"
         },
         {
             "name": "vlucas/phpdotenv",

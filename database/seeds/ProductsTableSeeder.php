@@ -19,7 +19,7 @@ class ProductsTableSeeder extends Seeder
                 'en'=>['name'=>$product,'description'=>$product.' desc'],
                 'purchase_price'=>20,
                 'sale_price'=>30,
-                'stock'=>5,
+                'stock'=>100,
             ]);
         }
     }
