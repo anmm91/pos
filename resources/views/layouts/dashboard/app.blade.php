@@ -90,7 +90,7 @@
     <header class="main-header">
 
         {{--<!-- Logo -->--}}
-        <a href="{{ asset('dashboard') }}/index2.html" class="logo">
+        <a href="{{route('dashboard.index')}}" class="logo">
             {{--<!-- mini logo for sidebar mini 50x50 pixels -->--}}
             <span class="logo-mini"><b>@lang('site.a')</b>@lang('site.lt')</span>
             <span class="logo-lg"><b>@lang('site.admin')</b>@lang('site.lte')</span>
